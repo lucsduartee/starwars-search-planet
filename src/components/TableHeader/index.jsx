@@ -1,24 +1,23 @@
 import React from 'react';
+import { TableRow, TableCell } from '@material-ui/core';
 
 function TableHeader() {
   return (
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Rotation Period</th>
-        <th>Orbital Period</th>
-        <th>Diameter</th>
-        <th>Climate</th>
-        <th>Gravity</th>
-        <th>Terrain</th>
-        <th>Surface Water</th>
-        <th>Population</th>
-        <th>Films</th>
-        <th>Created</th>
-        <th>Edited</th>
-        <th>URL</th>
-      </tr>
-    </thead>
+    <TableRow>
+      <TableCell>Name</TableCell>
+      <TableCell>Rotation Period</TableCell>
+      <TableCell>Orbital Period</TableCell>
+      <TableCell>Diameter</TableCell>
+      <TableCell>Climate</TableCell>
+      <TableCell>Gravity</TableCell>
+      <TableCell>Terrain</TableCell>
+      <TableCell>Surface Water</TableCell>
+      <TableCell>Population</TableCell>
+      <TableCell>Films</TableCell>
+      <TableCell>Created</TableCell>
+      <TableCell>Edited</TableCell>
+      <TableCell>URL</TableCell>
+    </TableRow>
   );
 }
 

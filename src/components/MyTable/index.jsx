@@ -1,0 +1,19 @@
+import React from 'react';
+import { TableContainer, Table, Paper, TableHead } from '@material-ui/core';
+import TableBody from '../TableBody';
+import TableHeader from '../TableHeader';
+
+function MyTable() {
+  return (
+    <TableContainer component={Paper}>
+      <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
+        <TableHead>
+          <TableHeader />
+        </TableHead>
+        <TableBody />
+      </Table>
+    </TableContainer>
+  );
+}
+
+export default MyTable;

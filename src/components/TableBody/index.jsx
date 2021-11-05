@@ -1,7 +1,29 @@
 import React, { useContext } from 'react';
+import { TableBody, TableRow, TableCell, tableCellClasses } from '@material-ui/core';
+import { styled } from '@material-ui/system';
 import GlobalContext from '../../context/context';
 
-function TableBody() {
+const StyledTableCell = styled(TableCell)(({ theme }) => ({
+  [`&.${tableCellClasses.head}`]: {
+    backgroundColor: theme.palette.common.black,
+    color: theme.palette.common.white,
+  },
+  [`&.${tableCellClasses.body}`]: {
+    fontSize: 14,
+  },
+}));
+
+const StyledTableRow = styled(TableRow)(({ theme }) => ({
+  '&:nth-of-type(odd)': {
+    backgroundColor: theme.palette.action.hover,
+  },
+  // hide last border
+  '&:last-child td, &:last-child th': {
+    border: 0,
+  },
+}));
+
+function TBody() {
   const { data, isLoading, filters } = useContext(GlobalContext);
 
   const filtred = () => {
@@ -26,31 +48,29 @@ function TableBody() {
   };
 
   const renderTable = () => (
-    <tbody>
+    <TableBody>
       {
         filtred().map((planet) => (
-          <tr key={ planet.name }>
-            <td>{planet.name}</td>
-            <td>{planet.rotation_period}</td>
-            <td>{planet.orbital_period}</td>
-            <td>{planet.diameter}</td>
-            <td>{planet.climate}</td>
-            <td>{planet.gravity}</td>
-            <td>{planet.terrain}</td>
-            <td>{planet.surface_water}</td>
-            <td>{planet.population}</td>
-            <td>
-              {planet.films.map((film) => (
-                <p key={ film }>{film}</p>
-              ))}
-            </td>
-            <td>{planet.created}</td>
-            <td>{planet.edited}</td>
-            <td>{planet.url}</td>
-          </tr>
+          <StyledTableRow key={ planet.name }>
+            <StyledTableCell>{planet.name}</StyledTableCell>
+            <StyledTableCell>{planet.rotation_period}</StyledTableCell>
+            <StyledTableCell>{planet.orbital_period}</StyledTableCell>
+            <StyledTableCell>{planet.diameter}</StyledTableCell>
+            <StyledTableCell>{planet.climate}</StyledTableCell>
+            <StyledTableCell>{planet.gravity}</StyledTableCell>
+            <StyledTableCell>{planet.terrain}</StyledTableCell>
+            <StyledTableCell>{planet.surface_water}</StyledTableCell>
+            <StyledTableCell>{planet.population}</StyledTableCell>
+            <StyledTableCell>
+              {planet.films}
+            </StyledTableCell>
+            <StyledTableCell>{planet.created}</StyledTableCell>
+            <StyledTableCell>{planet.edited}</StyledTableCell>
+            <StyledTableCell>{planet.url}</StyledTableCell>
+          </StyledTableRow>
         ))
       }
-    </tbody>
+    </TableBody>
   );
 
   return (
@@ -60,4 +80,4 @@ function TableBody() {
   );
 }
 
-export default TableBody;
+export default TBody;
