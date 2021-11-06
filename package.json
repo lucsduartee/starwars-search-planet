@@ -1,4 +1,5 @@
 {
+  "homepage": "https://lucsduartee.github.io/starwars-search-planet",
   "name": "sd-0x-project-react-context-hooks-starwars-datatable-filters",
   "version": "0.1.0",
   "private": true,
@@ -29,6 +30,8 @@
     "test-coverage": "react-scripts test --coverage --watchAll=false",
     "eject": "react-scripts eject",
     "lint:styles": "npx stylelint '**/*.css'",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json . --ext .js,.jsx"
   },
   "eslintConfig": {
@@ -50,6 +53,7 @@
     "@sheerun/mutationobserver-shim": "0.3.3",
     "eslint": "6.8.0",
     "eslint-config-trybe-frontend": "1.2.0",
+    "gh-pages": "^3.2.3",
     "stylelint": "13.8.0",
     "stylelint-order": "4.1.0"
   }
