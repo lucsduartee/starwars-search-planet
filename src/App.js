@@ -4,12 +4,12 @@ import Header from './components/Header';
 import MyTable from './components/MyTable';
 import GlobalContextProvider from './context/ContextProvider';
 import NumericFilter from './components/NumericFilter';
-import { ThemeProvider, createTheme } from '@material-ui/core';
+import { ThemeProvider, createTheme, Container } from '@material-ui/core';
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#607d8b',
+      main: '#202020',
     },
     secondary: {
       main: '#3f51b5',
@@ -23,7 +23,9 @@ function App() {
       <GlobalContextProvider>
         <Header />
         <NumericFilter />
-        <MyTable />
+          <Container maxWidth="xl" sx={{ boxShadow: 4 }}>
+            <MyTable />
+          </Container>
       </GlobalContextProvider>
     </ThemeProvider>
   );

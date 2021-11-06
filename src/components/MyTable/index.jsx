@@ -6,7 +6,7 @@ import TableHeader from '../TableHeader';
 function MyTable() {
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
+      <Table>
         <TableHead>
           <TableHeader />
         </TableHead>

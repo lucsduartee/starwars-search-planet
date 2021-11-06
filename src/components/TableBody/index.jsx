@@ -62,7 +62,9 @@ function TBody() {
             <StyledTableCell>{planet.surface_water}</StyledTableCell>
             <StyledTableCell>{planet.population}</StyledTableCell>
             <StyledTableCell>
-              {planet.films}
+              {planet.films.map((film) => (
+                <p>{film}</p>
+              ))}
             </StyledTableCell>
             <StyledTableCell>{planet.created}</StyledTableCell>
             <StyledTableCell>{planet.edited}</StyledTableCell>
