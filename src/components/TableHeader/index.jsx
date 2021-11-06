@@ -13,7 +13,6 @@ function TableHeader() {
       <TableCell>Terrain</TableCell>
       <TableCell>Surface Water</TableCell>
       <TableCell>Population</TableCell>
-      <TableCell>Films</TableCell>
       <TableCell>Created</TableCell>
       <TableCell>Edited</TableCell>
       <TableCell>URL</TableCell>

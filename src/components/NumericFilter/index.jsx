@@ -104,6 +104,7 @@ function NumericFilter() {
         justifyContent: 'space-between',
         flexDirection: 'column',
         my: 10,
+        mt: 15,
       }}
     >
       <Box>
@@ -129,9 +130,9 @@ function NumericFilter() {
             id="demo-comparison"
             value={comparison}
           >
-            <MenuItem value="greater than">greater than</MenuItem>
-            <MenuItem value="less than">less than</MenuItem>
-            <MenuItem value="equal to">equal to</MenuItem>
+            <MenuItem value="maior que">greater than</MenuItem>
+            <MenuItem value="menor que">less than</MenuItem>
+            <MenuItem value="igual a">equal to</MenuItem>
           </Select>
         </FormControl>
         <FormControl sx={{ m: 2, minWidth: 150 }}>

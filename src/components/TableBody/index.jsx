@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { TableBody, TableRow, TableCell, tableCellClasses } from '@material-ui/core';
+import { TableBody, TableRow, TableCell, tableCellClasses, LinearProgress, Box } from '@material-ui/core';
 import { styled } from '@material-ui/system';
 import GlobalContext from '../../context/context';
 
@@ -61,11 +61,6 @@ function TBody() {
             <StyledTableCell>{planet.terrain}</StyledTableCell>
             <StyledTableCell>{planet.surface_water}</StyledTableCell>
             <StyledTableCell>{planet.population}</StyledTableCell>
-            <StyledTableCell>
-              {planet.films.map((film) => (
-                <p>{film}</p>
-              ))}
-            </StyledTableCell>
             <StyledTableCell>{planet.created}</StyledTableCell>
             <StyledTableCell>{planet.edited}</StyledTableCell>
             <StyledTableCell>{planet.url}</StyledTableCell>
@@ -77,7 +72,7 @@ function TBody() {
 
   return (
     isLoading
-      ? <p>Carregando</p>
+      ? <Box sx={{ width: '500' }}><LinearProgress /></Box>
       : renderTable()
   );
 }

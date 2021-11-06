@@ -5,6 +5,7 @@ import MyTable from './components/MyTable';
 import GlobalContextProvider from './context/ContextProvider';
 import NumericFilter from './components/NumericFilter';
 import { ThemeProvider, createTheme, Container } from '@material-ui/core';
+import Footer from './components/Footer';
 
 const theme = createTheme({
   palette: {
@@ -26,6 +27,7 @@ function App() {
           <Container maxWidth="xl" sx={{ boxShadow: 4 }}>
             <MyTable />
           </Container>
+          <Footer />
       </GlobalContextProvider>
     </ThemeProvider>
   );
